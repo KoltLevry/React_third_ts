@@ -5,6 +5,7 @@ function Lessons() {
   return (
     <div className="lessons-wrapper">
       <div className="lessons-numbers-container">
+      <div>Welcome to the Lessons Page!</div>
         <ul>
           <li>
             <Link to="lesson-01">Lesson 1</Link>
