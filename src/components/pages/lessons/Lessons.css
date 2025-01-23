@@ -1,0 +1,47 @@
+.lessons-wrapper {
+    display: flex;
+    height: calc(100vh - 100px); 
+    background-color: #f9f9f9;
+    font-size: 24px;
+  }
+  
+  .lessons-numbers-container {
+    width: 20%;
+    padding: 20px;
+    background-color: #eef1f7;
+    border-right: 2px solid #ccc;
+  }
+  
+  .lessons-numbers-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .lessons-numbers-container li {
+    margin-bottom: 20px;
+  }
+  
+  .lessons-numbers-container a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 5px;
+  }
+  
+  .lessons-numbers-container a:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .tasks-load-container {
+    width: 80%;
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
