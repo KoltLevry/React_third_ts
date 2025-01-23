@@ -1,0 +1,65 @@
+.task-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+.task-card {
+    border: 2px solid black;
+    border-radius: 28px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.task-card:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+
+.task_3-container,
+.task_4-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.task-wrapper input,
+.task-wrapper button{
+    width: 150px;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.task_3-container h1,
+.task_4-container h1{
+    text-align: center;
+}
+
+@media (max-width: 1344px) {
+    .task-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    font-size: 1.3rem;
+
+    }
+}
+
+@media (max-width: 1068px) {
+    .home-numbers-container {
+        display: none;
+    }
+    .task-wrapper {
+        grid-template-columns: 1fr 1fr;
+        font-size: 1.1rem;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .task-wrapper {
+        grid-template-columns: 1fr;
+        font-size: 0.9rem;
+
+    }
+}

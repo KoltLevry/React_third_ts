@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className="home-wrapper">
       <div className="home-numbers-container">
-      <div>Welcome to the Home Page!</div>
+      <div className="homepage-title">Welcome to the Home Page!</div>
         <ul>
           <li>
             <Link to="mytask-01">Task 1</Link>

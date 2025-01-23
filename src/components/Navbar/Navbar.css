@@ -63,3 +63,35 @@
 /* .nav-container li:focus {
     outline: 3px solid rgba(51, 128, 242, 0.5); 
 } */
+
+@media (max-width: 1344px) {
+    .task-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    font-size: 1.3rem;
+
+    }
+}
+
+@media (max-width: 1068px) {
+    .logo-container {
+        display: none;
+    }
+    .nav-container ul{
+        gap:50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        display: none;
+    }
+    .nav-container ul{
+        gap:20px;
+        justify-content: center;
+        align-items: center;
+    }
+    /* .navbar-wrapper div{
+        display: none;
+
+    } */
+}
