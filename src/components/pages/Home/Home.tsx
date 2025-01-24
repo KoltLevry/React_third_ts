@@ -8,13 +8,13 @@ function Home() {
       <div className="homepage-title">Welcome to the Home Page!</div>
         <ul>
           <li>
-            <Link to="mytask-01">Task 1</Link>
+            <Link to="mytask-01">Task 1 - Introduce</Link>
           </li>
           <li>
-            <Link to="mytask-02">Task 2</Link>
+            <Link to="mytask-02">Task 2 - Interfaces</Link>
           </li>
           <li>
-            <Link to="mytask-03">Task 3</Link>
+            <Link to="mytask-03">Task 3 - New level</Link>
           </li>
         </ul>
       </div>
