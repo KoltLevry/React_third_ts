@@ -12,8 +12,8 @@ import Lesson_04 from "./components/pages/lessons/Lesson_04/Lesson_04";
 
 import Homeworks from "./components/pages/homeworks/Homeworks";
 
-import Homework_01 from "./components/pages/homeworks/Homework_01/Homework_01";
-import Homework_02 from './components/pages/homeworks/Homework_02/Homework_02';
+import Homework_08 from "./components/pages/homeworks/Homework_08/Homework_08";
+import Homework_09 from './components/pages/homeworks/Homework_09/Homework_09';
 
 function App() {
   return (
@@ -33,8 +33,8 @@ function App() {
               <Route path="lesson-04" element={<Lesson_04 />} />
             </Route>
             <Route path="/homeworks" element={<Homeworks />}>
-              <Route path="homework-01" element={<Homework_01 />} />
-              <Route path="homework-02" element={<Homework_02 />} />
+              <Route path="homework-08" element={<Homework_08 />} />
+              <Route path="homework-09" element={<Homework_09 />} />
             </Route>
           </Routes>
       </Router>

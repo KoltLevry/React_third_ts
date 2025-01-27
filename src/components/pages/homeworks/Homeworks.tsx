@@ -8,13 +8,13 @@ function Homework() {
       <div className="homeworkpage-title">Welcome to the Homeworks Page!</div>
         <ul>
           <li>
-            <Link to="homework-01">Homework 1</Link>
+            <Link to="homework-08">Homework 8</Link>
           </li>
           <li>
-            <Link to="homework-02">Homework 2 = 7</Link>
+            <Link to="homework-09">Homework 9</Link>
           </li>
           <li>
-            <Link to="homework-03">Homework 3 = 8</Link>
+            <Link to="homework-10">Homework 10</Link>
           </li>
         </ul>
       </div>
