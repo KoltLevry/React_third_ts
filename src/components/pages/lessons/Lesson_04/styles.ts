@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 
 //Интерфейс для пропсов(тоже объект) стилизованного компонента BoxInfo
 interface BoxInfoStyledProps {
-  primary?: boolean
+  primaryS?: boolean;
 }
 
 //шаблоны стилей для переиспользования
@@ -14,36 +14,43 @@ const boxBasicStyles = css`
  padding: 20px;
 `
 
+const boxSecodStyle = css`
+ color: white;
+`
+
 export const BoxInfo = styled.div<BoxInfoStyledProps>`
 //подстановка переменной, которая содержит шаблон стилей
  ${boxBasicStyles}
+ ${boxSecodStyle}
  min-width: 300px;
  min-height: 300px;
- /* background-color: rebeccapurple; */
+ border-radius: 20px;
  //Добавление логики, через props, для использования различных значений свойств
- background-color: ${(props) => props.primary ? 'rebeccapurple' : 'purple'};
+ background-color: ${ (props) => props.primaryS ? "rebeccapurple" : "#fff233"};
  /* border: 2px solid purple; */
- border: ${({ primary }) => primary ? '2px solid purple' : '6px solid grey'};
-
+ border: ${ ({primaryS}) => primaryS ?  "6px solid lightgreen" : "2px dashed blue"};
  //пример работы с псевдоклассом
  &:hover{
-  background-color: #EC4DFA
+  /* background-color: #EC4DFA */
  }
 `;
 
 export const ContentContainer = styled.div`
- //подстановка переменной, которая содержит шаблон стилей
  ${boxBasicStyles}
  flex-direction: column;
+ /* accent-color:  */
  gap: 20px;
  border-color: grey;
+ box-shadow: 2px 10px 8px rgba(0,0,0,0.2);
 `
 
 export const Image = styled.img`
- width: 30px;
+ width: 150px;
+ padding-left: 20px;
 `
 
-export const Text = styled.p`
-  font-size: 24px;
-  color: red;
+export const Text = styled.p `
+  font-size: 32px;
+  color: blue;
+  font-weight: bold;
 `

@@ -2,16 +2,16 @@
 import './styles.css'
 //3 способ - использование библиотеки emotion (использование стилизованных компонентов)
 // import { BoxInfo, ContentContainer, Image, Text } from './styles'
-// import Example1 from '../../assets/avatar.jpg';
-// import Example2 from '../../assets/logo.jpg';
-
+import { BoxInfo, Text, ContentContainer, Image } from './styles'
+import Example1 from '../../../../assets/avatar.jpg';
 
 function Lesson04() {
   //Объект для inline стилей (2 способ)
   const textStyles = {
     color: 'red',
     fontWeight: "bold",
-    cursor: "pointer"
+    cursor: "pointer",
+    fontSize: "32px",
   }
 
   return (
@@ -21,18 +21,13 @@ function Lesson04() {
       <p style={textStyles}>Inline style example 2</p>
       <div >Inline style example 3</div>
       {/* 3 способ - использование библиотеки emotion */}
-      {/* <BoxInfo primary>
+      <div className='boxInfo-box'>
         <ContentContainer>
           <Image src={Example1} />
-          <Text>Emotion example 1</Text>
+          <BoxInfo primaryS>Emotion example</BoxInfo>
         </ContentContainer>
-      </BoxInfo>
-      <BoxInfo>
-        <ContentContainer>
-          <Image src={Example2} />
-          <Text>Emotion example 2</Text>
-        </ContentContainer>
-      </BoxInfo> */}
+        <BoxInfo><Text>Emotion example 2</Text></BoxInfo>
+      </div>
     </div>
   )
 }

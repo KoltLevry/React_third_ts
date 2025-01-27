@@ -1,4 +1,4 @@
-// Discriminated union type - дата рождения обязательное, если заполнено значение возраста
+ // Discriminated union type - дата рождения обязательное, если заполнено значение возраста
 // type ExampleDiscriminated =
 // | {age: string; date: string}
 // | {age?: undefined; date?: string}
