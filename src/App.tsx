@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/pages/Home/Home";
 import MyTask_01 from "./components/pages/Home/MyTask_01/MyTask_01";
 import MyTask_02 from "./components/pages/Home/MyTask_02/MyTask_02";
+import MyTask_03 from "./components/pages/Home/MyTask_03/MyTask_03";
 
 import Lessons from "./components/pages/lessons/Lessons";
 import Lesson_01 from "./components/pages/lessons/Lesson_01/Lesson_01";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Home />} >
             <Route path="mytask-01" element={<MyTask_01 />} />
             <Route path="mytask-02" element={<MyTask_02 />} />
+            <Route path="mytask-03" element={<MyTask_03 />} />
           </Route>
           <Route path="/lessons" element={<Lessons />}>
             <Route path="lesson-01" element={<Lesson_01 />} />
