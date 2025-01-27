@@ -5,16 +5,16 @@ function Homework() {
   return (
     <div className="homework-wrapper">
       <div className="homework-numbers-container">
-      <div>Welcome to the Homeworks Page!</div>
+      <div className="homeworkpage-title">Welcome to the Homeworks Page!</div>
         <ul>
           <li>
             <Link to="homework-01">Homework 1</Link>
           </li>
           <li>
-            <Link to="homework-02">Homework 2</Link>
+            <Link to="homework-02">Homework 2 = 7</Link>
           </li>
           <li>
-            <Link to="homework-03">Homework 3</Link>
+            <Link to="homework-03">Homework 3 = 8</Link>
           </li>
         </ul>
       </div>

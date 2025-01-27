@@ -4,7 +4,8 @@ import { InputProps } from './types'
 function Input({ name, type = 'text', placeholder, label, id }: InputProps) {
   return (
     <div className="input-container">
-      {label && <label htmlFor={id}>{label}</label>}
+      {label && <label htmlFor={id}>{label}</label>} 
+      {/* // 7 before */}
       <input
         name={name}
         id={id}

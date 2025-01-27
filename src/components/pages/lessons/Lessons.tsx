@@ -5,16 +5,19 @@ function Lessons() {
   return (
     <div className="lessons-wrapper">
       <div className="lessons-numbers-container">
-      <div>Welcome to the Lessons Page!</div>
+      <div className="lessonpage-title">Welcome to the Lessons Page!</div>
         <ul>
           <li>
             <Link to="lesson-01">Lesson 1</Link>
           </li>
           <li>
-            <Link to="lesson-02">Lesson 2</Link>
+            <Link to="lesson-04">Lesson 4 = 8</Link>
           </li>
           <li>
-            <Link to="lesson-03">Lesson 3</Link>
+            <Link to="lesson-05">Lesson 5 = 9</Link>
+          </li>
+          <li>
+            <Link to="lesson-06">Lesson 6 = 10</Link>
           </li>
         </ul>
       </div>
