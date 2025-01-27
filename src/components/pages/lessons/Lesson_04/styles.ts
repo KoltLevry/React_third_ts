@@ -29,9 +29,12 @@ export const BoxInfo = styled.div<BoxInfoStyledProps>`
  background-color: ${ (props) => props.primaryS ? "rebeccapurple" : "#fff233"};
  /* border: 2px solid purple; */
  border: ${ ({primaryS}) => primaryS ?  "6px solid lightgreen" : "2px dashed blue"};
+ 
  //пример работы с псевдоклассом
  &:hover{
-  /* background-color: #EC4DFA */
+  background-color: #EC4DFA;
+  color: green;
+  font-weight: bold;
  }
 `;
 

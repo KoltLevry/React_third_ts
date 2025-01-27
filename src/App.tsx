@@ -1,4 +1,4 @@
-import "./App.css";
+import GlobalStyles from './styles/GlobalStyles';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/pages/Home/Home";
@@ -17,26 +17,28 @@ import Homework_02 from './components/pages/homeworks/Homework_02/Homework_02';
 
 function App() {
   return (
-    <Router>
-      <div className="app">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} >
-            <Route path="mytask-01" element={<MyTask_01 />} />
-            <Route path="mytask-02" element={<MyTask_02 />} />
-            <Route path="mytask-03" element={<MyTask_03 />} />
-          </Route>
-          <Route path="/lessons" element={<Lessons />}>
-            <Route path="lesson-01" element={<Lesson_01 />} />
-            <Route path="lesson-04" element={<Lesson_04 />} />
-          </Route>
-          <Route path="/homeworks" element={<Homeworks />}>
-            <Route path="homework-01" element={<Homework_01 />} />
-            <Route path="homework-02" element={<Homework_02 />} />
-          </Route>
-        </Routes>
-      </div>
-    </Router>
+    <>
+    {/* фрагмент */}
+      <Router>
+          <GlobalStyles />
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} >
+              <Route path="mytask-01" element={<MyTask_01 />} />
+              <Route path="mytask-02" element={<MyTask_02 />} />
+              <Route path="mytask-03" element={<MyTask_03 />} />
+            </Route>
+            <Route path="/lessons" element={<Lessons />}>
+              <Route path="lesson-01" element={<Lesson_01 />} />
+              <Route path="lesson-04" element={<Lesson_04 />} />
+            </Route>
+            <Route path="/homeworks" element={<Homeworks />}>
+              <Route path="homework-01" element={<Homework_01 />} />
+              <Route path="homework-02" element={<Homework_02 />} />
+            </Route>
+          </Routes>
+      </Router>
+    </>
   );
 }
 
