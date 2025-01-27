@@ -1,19 +1,19 @@
 import "./styles.css";
 import { InputProps } from './types'
+import { InputContainer, InputElement, StyledLabel } from './styles'
 
 function Input({ name, type = 'text', placeholder, label, id }: InputProps) {
   return (
-    <div className="input-container">
-      {label && <label htmlFor={id}>{label}</label>} 
+    <InputContainer>
       {/* // 7 before */}
-      <input
+      {label && <StyledLabel htmlFor={id}>{label}</StyledLabel>} 
+      <InputElement
         name={name}
         id={id}
         type={type}
         placeholder={placeholder}
-        className="input-element"
       />
-    </div>
+    </InputContainer>
   );
 }
 

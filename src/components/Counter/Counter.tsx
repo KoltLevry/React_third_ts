@@ -1,6 +1,6 @@
 import Button from "../Button/Button";
-import "./styles.css";
 import { useState } from "react";
+import { CounterWrapper, ButtornWrapper, ResultContainer} from './styles'
 
 function Counter() {
   const [counter, setCounter] = useState<number>(0);
@@ -18,15 +18,15 @@ function Counter() {
   };
 
   return (
-    <div className="counter-wrapper">
-      <div className="button-wrapper">
+    <CounterWrapper>
+      <ButtornWrapper>
         <Button name="-" type="button" onClick={onMinusClick} />
-      </div>
-      <div className="result-container">{counter}</div>
+      </ButtornWrapper>
+      <ResultContainer>{counter}</ResultContainer>
       <div className="button-wrapper">
         <Button name="+" type="button" onClick={onPlusClick} />
       </div>
-    </div>
+    </CounterWrapper>
   );
 }
 
