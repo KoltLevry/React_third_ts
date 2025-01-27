@@ -23,10 +23,6 @@ function MyTask_03() {
 
     console.log("isArray: ", Array.isArray(num));
 
-    interface IPersone
-
-
-
 
     return(
         <div>Hi m 3</div>
