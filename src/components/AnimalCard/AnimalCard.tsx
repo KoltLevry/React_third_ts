@@ -1,11 +1,25 @@
 import { AnimalCardProps } from "./types";
-import { AnimalCardWrapper, CardImage, AnimalName, AnimalSpecies } from "./styles";
+import { AnimalCardWrapper, 
+         CardImage, 
+         AnimalName, 
+         AnimalSpecies,
+         CardTitle,
+         CardContent } from "./styles";
 
-function AnimalCard({ animalName, animalSpecies, animalImg, children }: AnimalCardProps) {
+function AnimalCard({ 
+    animalName, 
+    animalSpecies, 
+    animalImg, 
+    children, 
+    title, 
+    content, 
+    highlighted = false}: AnimalCardProps) {
   return (
-    <AnimalCardWrapper>
+    <AnimalCardWrapper highlighted={highlighted}>
+      <CardTitle>{title}</CardTitle>
       <AnimalName>{animalName}</AnimalName>
       <AnimalSpecies>{animalSpecies}</AnimalSpecies>
+      <CardContent>{content}</CardContent>
       <CardImage src={animalImg} />
       {children}
     </AnimalCardWrapper>

@@ -1,6 +1,10 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 
-export const AnimalCardWrapper = styled.div `
+interface CardStyledProps {
+  highlighted?: boolean;
+}
+
+export const AnimalCardWrapper = styled.div<CardStyledProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,19 +12,30 @@ export const AnimalCardWrapper = styled.div `
   gap: 20px;
   min-width: 300px;
   min-height: 400px;
-  background-color: rgb(145, 218, 211);
-  border-radius: 6px;
+  border-radius: 16px;
   font-size: 24px;
+  
+  background-color: ${ ({highlighted}) => (highlighted ? "rgba(145, 218, 211, 0.425)" : "purple")};
+
+`;
+
+export const CardTitle = styled.h1`
+  color: white;
 `;
 
 export const CardImage = styled.img`
   width: 100px;
-`
+`;
 
 export const AnimalName = styled.h3`
   text-align: center;
-`
+`;
 
 export const AnimalSpecies = styled.div`
   font-weight: bold;
-`
+`;
+
+export const CardContent = styled.p`
+  color: white;
+  font-size: 24px;
+`;

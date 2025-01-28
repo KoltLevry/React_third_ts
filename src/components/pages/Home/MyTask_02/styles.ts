@@ -1,62 +1,72 @@
-.mytask_02-wrapper {
-  background-color: lightgray;
+import styled from '@emotion/styled';
+import { keyframes } from '@emotion/react'; 
+
+const slideIn = keyframes`
+  from {
+    transform: translateX(-10px);
+    opacity:0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`
+
+export const TaskWrapper = styled.div`
+background-color: lightgray;
   height: 100%;
   padding: 20px;
   border-radius: 2px;
-}
+  `
 
-@counter-style custom-counter {
-    system: numeric;
-    symbols: "★" "☆";
-    /* symbols: "★"; */
-    suffix: " ";
-}
 
-.myCar_Task-box ul {
-    list-style: custom-counter;
-    counter-reset: custom-counter;
-}
+export const MainTitle = styled.h1`
+animation: ${slideIn} 1.1s ease-in-out;`
 
-@counter-style roman-style {
-    system: additive;
-    symbols: I V X L C D M;
-    additive-symbols: 1000 M, 500 D, 100 C, 50 L, 10 X, 5 V, 1 I;
-}
+export const SecondMainTitle = styled.h2``
+export const ThirdMainTitle = styled.h3``
+export const SimpleText = styled.p``
 
-.mySkills_Task-box ul {
-    list-style: roman-style;
-}
+export const ListItem = styled.li`
+list-style: square`
 
-@keyframes slideIn {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
+
+export const CarTaskBox = styled.ul`
+list-style: custom-counter;
+counter-reset: custom-counter;
+
+`
+
+export const TaskBox = styled.div`
+display: flex;
+flex-direction: column;
+gap: 20px;
+`
+
+
+export const d = styled.div`
+
+`
+
+// @counter-style custom-counter {
+//     system: numeric;
+//     symbols: "★" "☆";
+//     /* symbols: "★"; */
+//     suffix: " ";
+// }
+
+
+// @counter-style roman-style {
+//     system: additive;
+//     symbols: I V X L C D M;
+//     additive-symbols: 1000 M, 500 D, 100 C, 50 L, 10 X, 5 V, 1 I;
+// }
+
+// .mySkills_Task-box ul {
+//     list-style: roman-style;
+// }
   
-  .element {
-    animation: slideIn 1s ease-in-out;
-  }
 
-  /* Створи анімацію, яка змінює колір кнопки з червоного на зелений за 3 секунди. */
-
-  @keyframes colorChange {
-    0% {
-      background-color: red;
-    }
-    100% {
-      background-color: green;
-    }
-  }
-  
-  .element_2-0, .intro-box button {
-    animation: colorChange 3s ease-in-out;
-  }
-  
 
 
 /* @-webkit-keyframes{} - alt */

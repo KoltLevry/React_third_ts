@@ -2,7 +2,8 @@ import styled from '@emotion/styled';
 
 interface ButtonStyledProps {
   disabled: boolean;
-  variant: "primaryFirst" | "secondarySecond"
+  variant: "primaryFirst" | "secondarySecond";
+  isToggled: boolean;
 }
 
 export const MainButton = styled.button<ButtonStyledProps>`
