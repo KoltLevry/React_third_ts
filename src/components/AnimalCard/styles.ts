@@ -16,3 +16,11 @@ export const AnimalCardWrapper = styled.div `
 export const CardImage = styled.img`
   width: 100px;
 `
+
+export const AnimalName = styled.h3`
+  text-align: center;
+`
+
+export const AnimalSpecies = styled.div`
+  font-weight: bold;
+`

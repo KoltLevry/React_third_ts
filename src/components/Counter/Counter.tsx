@@ -23,9 +23,9 @@ function Counter() {
         <Button name="-" type="button" onClick={onMinusClick} />
       </ButtornWrapper>
       <ResultContainer>{counter}</ResultContainer>
-      <div className="button-wrapper">
+      <ButtornWrapper>
         <Button name="+" type="button" onClick={onPlusClick} />
-      </div>
+      </ButtornWrapper>
     </CounterWrapper>
   );
 }

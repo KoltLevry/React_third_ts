@@ -1,11 +1,11 @@
 import { AnimalCardProps } from "./types";
-import { AnimalCardWrapper, CardImage } from "./styles";
+import { AnimalCardWrapper, CardImage, AnimalName, AnimalSpecies } from "./styles";
 
 function AnimalCard({ animalName, animalSpecies, animalImg, children }: AnimalCardProps) {
   return (
     <AnimalCardWrapper>
-      <h3>{animalName}</h3>
-      <div>{animalSpecies}</div>
+      <AnimalName>{animalName}</AnimalName>
+      <AnimalSpecies>{animalSpecies}</AnimalSpecies>
       <CardImage src={animalImg} />
       {children}
     </AnimalCardWrapper>

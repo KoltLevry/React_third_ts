@@ -1,6 +1,10 @@
 import styled from '@emotion/styled';
 
-export const MainButton = styled.button<{ disabled?: boolean }>`
+interface ButtonStyledProps {
+  disabled: boolean;
+}
+
+export const MainButton = styled.button<ButtonStyledProps>`
   width: 100%;
   min-height: 70px;
   outline: none;
