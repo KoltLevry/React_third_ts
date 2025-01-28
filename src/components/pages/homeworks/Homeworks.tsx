@@ -1,28 +1,37 @@
-import { Outlet, Link } from "react-router-dom";
-import "./Homeworks.css";
+import { Outlet} from "react-router-dom";
+import { 
+  HomeworkWrapper,
+  HomeworksPageTitle, 
+  HumworkNumberContainer,
+  HwNumberContainerList,
+  ListItem,
+  StyledLink,
+  TasksLoadContainer
+ }  from './Homeworks';
+
 
 function Homework() {
   return (
-    <div className="homework-wrapper">
-      <div className="homework-numbers-container">
-      <div className="homeworkpage-title">Welcome to the Homeworks Page!</div>
-        <ul>
-          <li>
-            <Link to="homework-08">Homework 8</Link>
-          </li>
-          <li>
-            <Link to="homework-09">Homework 9</Link>
-          </li>
-          <li>
-            <Link to="homework-10">Homework 10</Link>
-          </li>
-        </ul>
-      </div>
+    <HomeworkWrapper>
+      <HumworkNumberContainer>
+      <HomeworksPageTitle>Welcome to the Homeworks Page!</HomeworksPageTitle>
+        <HwNumberContainerList>
+          <ListItem>
+            <StyledLink to="homework-08">Homework 8</StyledLink>
+          </ListItem>
+          <ListItem>
+            <StyledLink to="homework-09">Homework 9</StyledLink>
+          </ListItem>
+          <ListItem>
+            {/* <Link to="homework-10">Homework 10</Link> */}
+          </ListItem>
+        </HwNumberContainerList>
+      </HumworkNumberContainer>
 
-      <div className="tasks-load-container">
+      <TasksLoadContainer>
         <Outlet />
-      </div>
-    </div>
+      </TasksLoadContainer>
+    </HomeworkWrapper>
   );
 }
 

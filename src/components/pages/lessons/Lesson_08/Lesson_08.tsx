@@ -5,7 +5,7 @@ import './styles.css'
 import { BoxInfo, Text, ContentContainer, Image } from './styles'
 import Example1 from '../../../../assets/avatar.jpg';
 
-function Lesson04() {
+function Lesson08() {
   //Объект для inline стилей (2 способ)
   const textStyles = {
     color: 'red',
@@ -32,4 +32,4 @@ function Lesson04() {
   )
 }
 
-export default Lesson04
+export default Lesson08

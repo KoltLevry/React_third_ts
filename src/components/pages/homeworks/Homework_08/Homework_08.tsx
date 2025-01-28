@@ -6,8 +6,9 @@ function Homework_08() {
      <Hm8Container>
     <TextTitle>Homework_08 TS!</TextTitle>
     <ButtonWrapper>
-      <Button name="Enabled Button"/>
-      <Button name="Disabled Button" disabled/>
+      <Button name="Enabled / Active Button" disabled={false}/>
+      <Button name="Disabled Button" disabled />
+      {/* disabled === disabled={true} */}
     </ButtonWrapper>
     </Hm8Container>
     )

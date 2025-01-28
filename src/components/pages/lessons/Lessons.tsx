@@ -1,31 +1,39 @@
-import { Outlet, Link } from "react-router-dom";
-import "./Lessons.css";
+import { Outlet } from "react-router-dom";
+import { 
+    LessonsWrapper,
+    LessonsPageTitle, 
+    LessonNumberContainer,
+    LessonNumberContainerList,
+    ListItem,
+    StyledLink,
+    TasksLoadContainer
+   }  from './Lessons';
 
 function Lessons() {
   return (
-    <div className="lessons-wrapper">
-      <div className="lessons-numbers-container">
-      <div className="lessonpage-title">Welcome to the Lessons Page!</div>
-        <ul>
-          <li>
-            <Link to="lesson-01">Lesson 1</Link>
-          </li>
-          <li>
-            <Link to="lesson-04">Lesson 4 = 8</Link>
-          </li>
-          <li>
-            <Link to="lesson-05">Lesson 5 = 9</Link>
-          </li>
-          <li>
-            <Link to="lesson-06">Lesson 6 = 10</Link>
-          </li>
-        </ul>
-      </div>
+    <LessonsWrapper>
+      <LessonNumberContainer>
+      <LessonsPageTitle>Welcome to the Lessons Page!</LessonsPageTitle>
+        <LessonNumberContainerList>
+          <ListItem>
+            <StyledLink to="lesson-08">Lesson 8</StyledLink>
+          </ListItem>
+          <ListItem>
+            <StyledLink to="lesson-09">Lesson 9</StyledLink>
+          </ListItem>
+          <ListItem>
+            {/* <StyledLink to="lesson-10">Lesson 10</StyledLink> */}
+          </ListItem>
+          <ListItem>
+            {/* <StyledLink to="lesson-01">Lesson 11</StyledLink> */}
+          </ListItem>
+        </LessonNumberContainerList>
+      </LessonNumberContainer>
 
-      <div className="tasks-load-container">
+      <TasksLoadContainer>
         <Outlet />
-      </div>
-    </div>
+      </TasksLoadContainer>
+    </LessonsWrapper>
   );
 }
 

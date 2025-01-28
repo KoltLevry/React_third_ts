@@ -7,8 +7,8 @@ import MyTask_02 from "./components/pages/Home/MyTask_02/MyTask_02";
 import MyTask_03 from "./components/pages/Home/MyTask_03/MyTask_03";
 
 import Lessons from "./components/pages/lessons/Lessons";
-import Lesson_01 from "./components/pages/lessons/Lesson_01/Lesson_01";
-import Lesson_04 from "./components/pages/lessons/Lesson_04/Lesson_04";
+import Lesson_08 from "./components/pages/lessons/Lesson_08/Lesson_08";
+import Lesson_09 from './components/pages/lessons/Lesson_09/Lesson_09';
 
 import Homeworks from "./components/pages/homeworks/Homeworks";
 
@@ -29,8 +29,8 @@ function App() {
               <Route path="mytask-03" element={<MyTask_03 />} />
             </Route>
             <Route path="/lessons" element={<Lessons />}>
-              <Route path="lesson-01" element={<Lesson_01 />} />
-              <Route path="lesson-04" element={<Lesson_04 />} />
+              <Route path="lesson-08" element={<Lesson_08 />} />
+              <Route path="lesson-09" element={<Lesson_09 />} />
             </Route>
             <Route path="/homeworks" element={<Homeworks />}>
               <Route path="homework-08" element={<Homework_08 />} />
