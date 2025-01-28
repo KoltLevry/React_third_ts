@@ -1,7 +1,7 @@
 import { InputsContainer, Lesson09Wrapper, ResultInput } from "./styles";
 import Input from "../../../Input/Input";
 
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 
 function Lesson09() {
     // State for name
@@ -18,7 +18,13 @@ function Lesson09() {
     setUserAgeValue(event.target.value);
   }
 
+  useEffect( () => {
+    console.log("Mounting");
+  }, [])
 
+  useEffect( () => {
+    console.log("Update user name");
+  }, [userNameValue])
 
   return (
     <Lesson09Wrapper>
