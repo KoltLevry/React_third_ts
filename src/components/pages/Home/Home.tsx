@@ -1,3 +1,4 @@
+import React from "react";
 import { Outlet } from "react-router-dom";
 import { 
   HomeWrapper,
@@ -7,7 +8,7 @@ import {
   ListItem,
   StyledLink,
   TasksLoadContainer
- }  from './Home';
+ }  from './styles';
 
 
 function Home() {
@@ -36,3 +37,4 @@ function Home() {
 }
 
 export default Home;
+

@@ -1,0 +1,19 @@
+.lesson08-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    /* flex: 1; */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+  }
+
+  .boxInfo-box {
+    display: flex;
+    gap: 30px;
+  }

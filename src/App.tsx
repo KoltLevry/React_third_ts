@@ -6,19 +6,18 @@ import MyTask_01 from "./components/pages/Home/MyTask_01/MyTask_01";
 import MyTask_02 from "./components/pages/Home/MyTask_02/MyTask_02";
 import MyTask_03 from "./components/pages/Home/MyTask_03/MyTask_03";
 
-import Lessons from "./components/pages/lessons/Lessons";
+import Lessons from "./components/pages/lessons/Lessons"
 import Lesson_08 from "./components/pages/lessons/Lesson_08/Lesson_08";
 import Lesson_09 from './components/pages/lessons/Lesson_09/Lesson_09';
 
-import Homeworks from "./components/pages/homeworks/Homeworks";
-
+import Homeworks from "./components/pages/homeworks/Homeworks"
 import Homework_08 from "./components/pages/homeworks/Homework_08/Homework_08";
 import Homework_09 from './components/pages/homeworks/Homework_09/Homework_09';
 
 function App() {
   return (
     <>
-    {/* фрагмент */}
+    
       <Router>
           <GlobalStyles />
           <Navbar />

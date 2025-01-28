@@ -1,3 +1,4 @@
+import React from "react";
 import { Outlet } from "react-router-dom";
 import { 
     LessonsWrapper,
@@ -7,7 +8,7 @@ import {
     ListItem,
     StyledLink,
     TasksLoadContainer
-   }  from './Lessons';
+   }  from './styles';
 
 function Lessons() {
   return (
@@ -21,12 +22,6 @@ function Lessons() {
           <ListItem>
             <StyledLink to="lesson-09">Lesson 9</StyledLink>
           </ListItem>
-          <ListItem>
-            {/* <StyledLink to="lesson-10">Lesson 10</StyledLink> */}
-          </ListItem>
-          <ListItem>
-            {/* <StyledLink to="lesson-01">Lesson 11</StyledLink> */}
-          </ListItem>
         </LessonNumberContainerList>
       </LessonNumberContainer>
 
@@ -38,3 +33,4 @@ function Lessons() {
 }
 
 export default Lessons;
+
