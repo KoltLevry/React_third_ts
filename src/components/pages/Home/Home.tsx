@@ -1,29 +1,39 @@
-import { Outlet, Link } from "react-router-dom";
-import "./Home.css";
+import { Outlet } from "react-router-dom";
+import { 
+  HomeWrapper,
+  HomePageTitle, 
+  HomeNumberContainer,
+  HomeNumberContainerList,
+  ListItem,
+  StyledLink,
+  TasksLoadContainer
+ }  from './styles';
+
 
 function Home() {
   return (
-    <div className="home-wrapper">
-      <div className="home-numbers-container">
-      <div className="homepage-title">Welcome to the Home Page!</div>
-        <ul>
-          <li>
-            <Link to="mytask-01">Task 1 - Introduce</Link>
-          </li>
-          <li>
-            <Link to="mytask-02">Task 2 - Interfaces</Link>
-          </li>
-          <li>
-            <Link to="mytask-03">Task 3 - New level</Link>
-          </li>
-        </ul>
-      </div>
+    <HomeWrapper>
+      <HomeNumberContainer>
+      <HomePageTitle>Welcome to the Home Page!</HomePageTitle>
+        <HomeNumberContainerList>
+          <ListItem>
+            <StyledLink to="mytask-01">Task 1 - Introduce</StyledLink>
+          </ListItem>
+          <ListItem>
+            <StyledLink to="mytask-02">Task 2 - Interfaces</StyledLink>
+          </ListItem>
+          <ListItem>
+            <StyledLink to="mytask-03">Task 3 - New level</StyledLink>
+          </ListItem>
+        </HomeNumberContainerList>
+      </HomeNumberContainer>
 
-      <div className="tasks-load-container">
+      <TasksLoadContainer>
         <Outlet />
-      </div>
-    </div>
+      </TasksLoadContainer>
+    </HomeWrapper>
   );
 }
 
 export default Home;
+
