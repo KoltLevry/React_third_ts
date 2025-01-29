@@ -1,20 +1,28 @@
 import styled from "@emotion/styled";
 
-
-
 export const MyTakWrapper = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   
 `
 
-export const SimpleText = styled.div``
-export const TitleSecond = styled.h2``
+export const SimpleText = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;`
+export const TitleSecond = styled.h2`
+text-align: center;
+margin: 20px;
+`
 export const TitleFirst = styled.h1`
 text-align: center;
+margin: 20px;
 `
 export const Text = styled.p`
 margin-top:20px;
@@ -38,15 +46,24 @@ export const CardWraper = styled.div`
 
 /*  4 task */
 export const ResultBlock = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
  font-size: 24px;
   width: 600px;
-  min-height: 100px;
+  min-height:300px;
   padding: 20px;
-  background-color: #f9d6758a;
+  background-color: #f3e4bc8a;
   font-weight: bold;
   font-size: 30px;
   border-radius: 16px;
   margin-top: 20px;
+`;
+
+export const ResultBlockImg = styled.img`
+/* padding: 30px; */
+width: 300px;
+  height: 300px;
 `;
 
 export const ExtraSpinner = styled.div`

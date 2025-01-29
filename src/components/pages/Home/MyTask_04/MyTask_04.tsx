@@ -1,6 +1,7 @@
-import { useEffect, useState, SetStateAction } from "react";
+import { useState } from "react";
 import axios from "axios";
 
+import Button from "../../../Button/Button";
 import {
   MyTakWrapper,
   SimpleText,
@@ -10,6 +11,9 @@ import {
   ListItem,
   TitleFirst,
   TryCodeBlock,
+  ResultBlock,
+  ButtonWrapper,
+  // ExtraSpinner,
 } from "./styles";
 
 function MyTask_04() {
@@ -19,16 +23,24 @@ function MyTask_04() {
   
   const [data, setData] = useState(null);
 
-  useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/posts/1")
-      .then((response: { data: SetStateAction<null>; }) => setData(response.data))
-      .catch((error: { data: SetStateAction<null>; })  => console.error("Помилка запиту:", error));
-  }, []);
+  // joke – зберігає жарт, який ми отримуємо з API.
+  const [joke, setJoke] = useState<string>("");
+
+  const fetchJokeData = async () => {
+      const JOKE_URL: string = 'https://official-joke-api.appspot.com/jokes/random';
+
+      try {
+        const result = await axios.get(JOKE_URL);
+        setJoke(`${result.data.setup} - ${result.data.punchline}`)
+      } catch {
+        setJoke("Не вдалося отримати жарт 😢");
+      }
+  }
 
   return (
     <>
       <MyTakWrapper>
+
         <TitleFirst>1. fetch vs. axios</TitleFirst>
         <SimpleText>
           <TitleSecond>
@@ -91,6 +103,13 @@ function MyTask_04() {
           </List>
           <Text>{data ? data.title : "Loading..."}</Text>
         </SimpleText>
+
+        <SimpleText>
+          <ButtonWrapper><Button name="Get Joke!" onClick={fetchJokeData}></Button></ButtonWrapper>
+          <ResultBlock>{joke}</ResultBlock>
+          {/* <ButtonWrapper><ExtraSpinner></ExtraSpinner></ButtonWrapper> */}
+        </SimpleText>
+
       </MyTakWrapper>
     </>
   );

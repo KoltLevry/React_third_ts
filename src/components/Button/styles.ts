@@ -7,14 +7,15 @@ interface ButtonStyledProps {
 }
 
 export const MainButton = styled.button<ButtonStyledProps>`
-  width: 100px;
+  min-width: 100px;
   min-height: 70px;
   outline: none;
   border: none;
   padding: 20px;
-  border-radius: 4px;
+  border-radius: 14px;
   font-family: Lato, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
+  font-size: 32px;
+  box-shadow: 0 4px 9px rgba(0,0,0,0.2);
 
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   color: ${({ disabled }) => (disabled ? '#a9a9a9' : 'white')};
@@ -23,7 +24,7 @@ export const MainButton = styled.button<ButtonStyledProps>`
       ? '#d3d3d3' 
       : variant === "secondarySecond"
       ? "white"
-      : "#1f27f5"};
+      : "#2828e8e3"};
 
 color: ${({ variant, disabled }) => 
     disabled
@@ -41,5 +42,10 @@ color: ${({ variant, disabled }) =>
         : variant === "secondarySecond"
         ? "#f0f8ff"
         : "#141bd9"};
+  }
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.9);
   }
 `;

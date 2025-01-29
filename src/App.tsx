@@ -6,6 +6,7 @@ import MyTask_01 from "./components/pages/Home/MyTask_01/MyTask_01";
 import MyTask_02 from "./components/pages/Home/MyTask_02/MyTask_02";
 import MyTask_03 from "./components/pages/Home/MyTask_03/MyTask_03";
 import MyTask_04 from './components/pages/Home/MyTask_04/MyTask_04';
+import MyTask_05 from './components/pages/Home/MyTask_05/MyTask_05';
 
 import Lessons from "./components/pages/lessons/Lessons"
 import Lesson_08 from "./components/pages/lessons/Lesson_08/Lesson_08";
@@ -29,6 +30,7 @@ function App() {
               <Route path="mytask-02" element={<MyTask_02 />} />
               <Route path="mytask-03" element={<MyTask_03 />} />
               <Route path="mytask-04" element={<MyTask_04 />} />
+              <Route path="mytask-05" element={<MyTask_05 />} />
             </Route>
             <Route path="/lessons" element={<Lessons />}>
               <Route path="lesson-08" element={<Lesson_08 />} />
