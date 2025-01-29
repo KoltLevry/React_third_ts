@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 import Button from "../../../Button/Button";
@@ -24,7 +24,8 @@ function MyTask_04() {
     const [fact, setFact] = useState<string>("");
     const [joke, setJoke] = useState<string>("");
     const [dogPic, setDogPic] = useState<string>("");
-    // const [userList, setUserList] = useState<string>("");
+    const [userList, setUserList] =  useState<Array<{ id: number; name: string; phone: string; company: { name: string } }>>([]);
+    
     // errors
     const [factError, setFactError] = useState<string | undefined>(undefined);
     const [jokeError, setJokeError] = useState<string | undefined>(undefined);
@@ -36,6 +37,15 @@ function MyTask_04() {
     const [isLoadingJoke, setIsLoadingJoke] = useState<boolean>(false);
 
     // Важливо! undefined ≠ null. null – це спеціальне значення, яке означає "нічого", а undefined – відсутність значення.
+
+  // Викликаємо функцію при першому завантаженні компонента
+  useEffect( () => {
+    getRandomFact();
+    getRandomJoke();
+    getRandomDogPic();
+    getUserList();
+  }, [])
+
 
   const getRandomFact = async () => {
     const FACT_URL: string = 'https://uselessfacts.jsph.pl/api/v2/facts/random?language=en';
@@ -60,7 +70,6 @@ function MyTask_04() {
     try {
       setIsLoadingJoke(true);
         const result = await axios.get(JOKE_URL);
-        console.log(result);
         setJoke(`${result.data.setup} - ${result.data.punchline}`);
 
     } catch (error: unknown) {
@@ -95,9 +104,8 @@ function MyTask_04() {
     setUserListError(undefined);
 
     try {
-      
       const result = await axios.get(USER_LIST_URL);
-      console.log(result);
+      setUserList(result.data);
 
     } catch(error: unknown) {
       if(error instanceof Error) {
@@ -143,13 +151,12 @@ function MyTask_04() {
             <ButtonWrapper><Button name="Get random user list" onClick={getUserList}></Button></ButtonWrapper>
             <ResultBlock>
               <List>
-                {/* <ListItem>{userName}</ListItem>
-                <ListItem>{userPhone}</ListItem>
-                <ListItem>{userCompany}></ListItem> */}
+                {userList.map( (user) => (
+                  <li key={user.id}>
+                    <strong>{user.name}</strong> ({user.company.name}) - {user.phone}
+                  </li>
+                ))}
               </List>
-              {/* <UserName>{userList}</UserName>
-              <UserPhone>{userList}</UserName>
-              <UserCompany>{userList}</UserCompany> */}
             </ResultBlock>
             {userListError && <ErrorBlock>{userListError}</ErrorBlock>}
         </SimpleText>
