@@ -20,18 +20,8 @@ export const TitleSecond = styled.h2`
 text-align: center;
 margin: 20px;
 `
-export const TitleFirst = styled.h1`
-text-align: center;
-margin: 20px;
-`
 export const Text = styled.p`
 margin-top:20px;
-`
-export const List = styled.ul``
-export const ListItem = styled.li``
-
-export const TryCodeBlock = styled.div`
-
 `
 
 export const ButtonWrapper = styled.div`
@@ -84,3 +74,24 @@ export const ExtraSpinner = styled.div`
   }
 `;
 
+// 4 card
+export const UserName = styled.h1`
+text-align: center;
+margin: 20px;
+`
+export const List = styled.ul``
+export const ListItem = styled.li``
+
+export const TryCodeBlock = styled.div`
+
+`
+export const ErrorBlock = styled.div`
+  width: 600px;
+  padding: 20px;
+  background-color: #eb9378;
+  border: 2px solid #e61212;
+  border-radius: 6px;
+  color: #e61212;
+  font-size: 28px;
+  font-weight: bold;
+`
