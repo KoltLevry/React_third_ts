@@ -22,6 +22,9 @@ function Lessons() {
           <ListItem>
             <StyledLink to="lesson-09">Lesson 9</StyledLink>
           </ListItem>
+          <ListItem>
+            <StyledLink to="lesson-10">Lesson 10</StyledLink>
+          </ListItem>
         </LessonNumberContainerList>
       </LessonNumberContainer>
 

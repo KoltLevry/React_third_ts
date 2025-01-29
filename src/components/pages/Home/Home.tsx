@@ -25,6 +25,9 @@ function Home() {
           <ListItem>
             <StyledLink to="mytask-03">Task 3 - New level</StyledLink>
           </ListItem>
+          <ListItem>
+            <StyledLink to="mytask-04">Task 4 - UseEffect, axios</StyledLink>
+          </ListItem>
         </HomeNumberContainerList>
       </HomeNumberContainer>
 
