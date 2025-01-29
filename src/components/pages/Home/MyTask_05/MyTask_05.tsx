@@ -56,8 +56,12 @@ function MyTask_04() {
       setIsLoading(true); // Перед запитом вмикаємо індикатор завантаження
         const result = await axios.get(FACT_URL);
         setFact(result.data.text);
-    } catch(error: any) {
-      setFactError(error.message)
+    } catch(error: unknown) {
+      if(error instanceof Error) {
+        setFactError(error.message)
+      } else {
+        setFactError("Unknown error");
+      }
     } finally {
       setIsLoading(false); // Вимикаємо індикатор завантаження після запиту
     }
@@ -94,8 +98,12 @@ function MyTask_04() {
         console.log(result);
         setDogPic(`${result.data.message}`);
 
-    } catch(error: any) {
-      setDogPicError(error.message);
+    } catch(error: unknown) {
+      if(error instanceof Error) {
+        setDogPicError(error.message);
+      } else {
+        setDogPicError("Unknown error");
+      }
     }
   }
 
