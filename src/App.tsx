@@ -18,6 +18,7 @@ import Homeworks from "./components/pages/homeworks/Homeworks"
 import Homework_08 from "./components/pages/homeworks/Homework_08/Homework_08";
 import Homework_09 from './components/pages/homeworks/Homework_09/Homework_09';
 import Homework_10 from './components/pages/homeworks/Homework_10/Homework_10';
+import Homework_11 from './components/pages/homeworks/Homework_11/Homework_11';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
               <Route path="homework-08" element={<Homework_08 />} />
               <Route path="homework-09" element={<Homework_09 />} />
               <Route path="homework-10" element={<Homework_10 />} />
+              <Route path="homework-11" element={<Homework_11 />} />
             </Route>
           </Routes>
       </Router>

@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet} from "react-router-dom";
 import { 
   HomeworkWrapper,
@@ -25,6 +24,9 @@ function Homeworks() {
           </ListItem>
           <ListItem>
             <StyledLink to="homework-10">Homework 10</StyledLink>
+          </ListItem>
+          <ListItem>
+            <StyledLink to="homework-11">Homework 11</StyledLink>
           </ListItem>
         </HwNumberContainerList>
       </HumworkNumberContainer>
