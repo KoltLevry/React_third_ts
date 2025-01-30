@@ -49,8 +49,12 @@ function Lesson10() {
         const result = await axios.get(JOKE_URL);
         const data = result.data;
         setJoke(`${data.setup} - ${data.punchline}`)
-      } catch (error: any) {
-        setError(error.message)
+      } catch (error: unknown) {
+        if(error instanceof Error) {
+            setError(error.message);
+        } else {
+            setError("Unknown error");
+        }
       } finally {
         setIsLoading(false)
       }

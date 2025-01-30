@@ -14,7 +14,7 @@ export const MainButton = styled.button<ButtonStyledProps>`
   padding: 20px;
   border-radius: 14px;
   font-family: Lato, Geneva, Tahoma, sans-serif;
-  font-size: 32px;
+  font-size: 24px;
   box-shadow: 0 4px 9px rgba(0,0,0,0.2);
 
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
