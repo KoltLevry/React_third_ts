@@ -14,7 +14,7 @@ export const InputElement = styled.input`
   outline: none;
   border: 1px solid black;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 18px;
 
   &::placeholder {
     color: #a19f9f;
@@ -22,7 +22,7 @@ export const InputElement = styled.input`
 `;
 
 export const StyledLabel = styled.label`
-  font-size: 14px;
+  font-size: 24px;
   color: #333;
   margin-bottom: 4px;
 `;

@@ -31,6 +31,21 @@ function Home() {
           <ListItem>
             <StyledLink to="mytask-05">Task 5 - APIs</StyledLink>
           </ListItem>
+          <ListItem>
+            <StyledLink to="mytask-06">Task 6 - Forms</StyledLink>
+          </ListItem>
+          <ListItem>
+            <StyledLink to="mytask-07">Task 7 - IDs search</StyledLink>
+          </ListItem>
+          <ListItem>
+            <StyledLink to="mytask-08">Task 8 - 2-APIs</StyledLink>
+          </ListItem>
+          <ListItem>
+            <StyledLink to="mytask-09">Task 9 - Pagination</StyledLink>
+          </ListItem>
+          <ListItem>
+            <StyledLink to="mytask-10">Task 10 - Filter & Sort</StyledLink>
+          </ListItem>
         </HomeNumberContainerList>
       </HomeNumberContainer>
 

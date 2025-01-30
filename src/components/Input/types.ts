@@ -9,4 +9,6 @@ export interface InputProps {
   // value?: string | number | boolean;
   value?: string;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  max?: number;  
+  min?: number;  
 }

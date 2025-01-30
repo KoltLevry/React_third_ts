@@ -1,10 +1,20 @@
 import { InputProps } from './types'
 import { InputContainer, InputElement, StyledLabel } from './styles'
 
-function Input({ name, type = 'text', placeholder, label, id, value, onChange }: InputProps) {
+function Input({ 
+      name, 
+      type = 'text',
+       placeholder, 
+       label, 
+       id, 
+       value, 
+       onChange, 
+       min,
+       max,
+       
+      }: InputProps) {
   return (
     <InputContainer>
-      {/* // 7 before */}
       {label && <StyledLabel htmlFor={id}>{label}</StyledLabel>} 
       <InputElement
         name={name}
@@ -13,6 +23,8 @@ function Input({ name, type = 'text', placeholder, label, id, value, onChange }:
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        min={type === "number" ? min : undefined}
+        max={type === "number" ? max : undefined}
       />
     </InputContainer>
   );

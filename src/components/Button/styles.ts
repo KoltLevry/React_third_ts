@@ -8,10 +8,11 @@ interface ButtonStyledProps {
 
 export const MainButton = styled.button<ButtonStyledProps>`
   min-width: 100px;
-  min-height: 70px;
+  min-height: 60px;
   outline: none;
   border: none;
-  padding: 20px;
+  padding: 10px;
+  margin-top: 10px;
   border-radius: 14px;
   font-family: Lato, Geneva, Tahoma, sans-serif;
   font-size: 24px;
