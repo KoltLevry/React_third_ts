@@ -1,7 +1,9 @@
 // import { useState, useEffect } from "react";
 import { 
         HwWrapper, 
-
+        GreetingText,
+        CardsContainer,
+        CatCard,
     } from "./styles.ts";
 // import Input from './../../../Input/Input';
 // import axios from "axios";
@@ -13,9 +15,33 @@ function Homework_11() {
   
    
     return (
-      <HwWrapper>
-       Hi 11
-      </HwWrapper>
+      <>
+          <HwWrapper>
+           <GreetingText>Cats Facts</GreetingText>
+           <CardsContainer>
+                <CatCard>
+                    <p>Text</p>
+                    <p>Image</p>
+                </CatCard>
+                <CatCard>
+                    <p>Text 1</p>
+                    <p>Image 1</p>
+                </CatCard>
+                <CatCard>
+                    <p>Text 1</p>
+                    <p>Image 1</p>
+                </CatCard>
+                <CatCard>
+                    <p>Text 1</p>
+                    <p>Image 1</p>
+                </CatCard>
+                <CatCard>
+                    <p>Text 1</p>
+                    <p>Image 1</p>
+                </CatCard>
+           </CardsContainer>
+          </HwWrapper>
+      </>
     );
   }
   

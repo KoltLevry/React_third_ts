@@ -1,19 +1,39 @@
 import styled from "@emotion/styled";
 
 export const HwWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  gap: 20px;
-  min-height: 500px;
-`;
-export const BoxContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  width: 300px;
-  position: relative;
-
+  align-items: center;
+  gap: 40px;
+  /* width: 300px; */
+  min-height: 100%;
+  min-width: 100%;
 `;
+
+export const GreetingText = styled.h1`
+background-color: red;
+`
+
+export const CardsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  min-width: 100%;
+`
+
+export const CatCard = styled.div`
+// ! max-width ? 
+// todo max-width ? 
+// ~ max-width ? 
+// // max-width ? 
+width: 700px;
+padding: 30px;
+border: 2px solid darkblue;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+background-color: #fff;
+`
+
 export const PhotoContainer = styled.img`
   width: 300px;
   height: 300px;
