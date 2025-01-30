@@ -72,7 +72,7 @@ function Homework_11() {
             )}
 
             {isLoading &&  <Spinner></Spinner>}
-            {error && <ErrorBlock>{error}</ErrorBlock>}        
+            {error && <ErrorBlock>{error}</ErrorBlock>}              
 
           </HwWrapper>
       </>

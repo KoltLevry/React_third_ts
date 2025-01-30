@@ -14,23 +14,21 @@ import {
   // UserName,
   // UserPhone,
   // UserCompany,
-  List,
   // ListItem,
   // ExtraSpinner,
 } from "./styles";
+import UserList from "./UserList/UserList";
 // Написання функції для отримання жарту
 function MyTask_04() {
 
     const [fact, setFact] = useState<string>("");
     const [joke, setJoke] = useState<string>("");
     const [dogPic, setDogPic] = useState<string>("");
-    const [userList, setUserList] =  useState<Array<{ id: number; name: string; phone: string; company: { name: string } }>>([]);
     
     // errors
     const [factError, setFactError] = useState<string | undefined>(undefined);
     const [jokeError, setJokeError] = useState<string | undefined>(undefined);
     const [dogPicError, setDogPicError] = useState<string | undefined>(undefined);
-    const [userListError, setUserListError] = useState<string | undefined>(undefined);
     // В JavaScript undefined означає, що змінна існує, але не має значення.
     // spinner
     const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -43,7 +41,6 @@ function MyTask_04() {
     getRandomFact();
     getRandomJoke();
     getRandomDogPic();
-    getUserList();
   }, [])
 
 
@@ -107,24 +104,6 @@ function MyTask_04() {
     }
   }
 
-  const getUserList = async () => {
-    const USER_LIST_URL: string = "https://jsonplaceholder.typicode.com/users";
-    setUserListError(undefined);
-
-    try {
-      const result = await axios.get(USER_LIST_URL);
-      setUserList(result.data);
-
-    } catch(error: unknown) {
-      if(error instanceof Error) {
-        setUserListError(error.message)
-      } else {
-        setUserListError("Unknown error!");
-      }
-
-    }
-  }
-
   return (
     <>
       <MyTakWrapper>
@@ -156,17 +135,7 @@ function MyTask_04() {
         </SimpleText>
         <SimpleText>
         <TitleSecond>4: Отримати випадковий список користувачів.</TitleSecond>
-            <ButtonWrapper><Button name="Get random user list" onClick={getUserList}></Button></ButtonWrapper>
-            <ResultBlock>
-              <List>
-                {userList.map( (user) => (
-                  <li key={user.id}>
-                    <strong>{user.name}</strong> ({user.company.name}) - {user.phone}
-                  </li>
-                ))}
-              </List>
-            </ResultBlock>
-            {userListError && <ErrorBlock>{userListError}</ErrorBlock>}
+           <UserList></UserList>
         </SimpleText>
         
       </MyTakWrapper>
