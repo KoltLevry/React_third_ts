@@ -10,6 +10,7 @@ import {
     } from "./styles.ts";
 import Spinner from './../../../Spinner/Spinner';
 import Button from "../../../Button/Button.tsx";
+// import { v4 as uuid } from "uuid";
 
 function Homework_11() {
 
@@ -35,15 +36,19 @@ function Homework_11() {
         } finally {
             setIsLoading(false);
         }
-    }
+    };
 
     const deleteAllFacts = () => {
         setCatFacts([]);
-    }
+    };
 
     useEffect( () => {
         getCatFact();
     }, [])
+
+    const factItems = catFacts.map((fact) => (
+      <CatCard key={uuidv4()}>{fact}</CatCard>
+    ));
    
     return (
       <>
@@ -64,11 +69,7 @@ function Homework_11() {
             </HederBox>
           
             { catFacts.length > 0 && (
-                <CardsContainer>
-                    { catFacts.map((fact, index) => (
-                        <CatCard key={index}>{fact}</CatCard>
-                    ))}           
-                </CardsContainer>
+                <CardsContainer>{factItems}</CardsContainer>
             )}
 
             {isLoading &&  <Spinner></Spinner>}
@@ -80,3 +81,7 @@ function Homework_11() {
   }
   
   export default Homework_11;
+
+function uuidv4(): import("react").Key | null | undefined {
+  throw new Error("Function not implemented.");
+}

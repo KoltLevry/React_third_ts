@@ -19,14 +19,12 @@ function MyTask_06() {
         const { name, value } = event.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
     
-        // Очистка помилки при введенні даних
         setErrors((prev) => ({ ...prev, [name]: value ? "" : prev[name] }));
       };
     
       const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
     
-        // Перевірка, чи всі поля заповнені
         const newErrors = {
           userName: formData.userName ? "" : "Name is required",
           userAge: formData.userAge ? "" : "Age is required",
@@ -34,10 +32,8 @@ function MyTask_06() {
     
         setErrors(newErrors);
     
-        // Якщо немає помилок - відправляємо форму
         if (!newErrors.userName && !newErrors.userAge) {
           console.log("Form submitted successfully!", formData);
-        //   alert("Form submitted successfully!");
         }
       };
     

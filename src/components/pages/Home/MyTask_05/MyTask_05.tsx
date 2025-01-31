@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import Button from "../../../Button/Button";
-import Spinner from './../../../Spinner/Spinner';
+// import Button from "../../../Button/Button";
+import Button from "components/Button/Button";
+
+import Spinner from "components/Spinner/Spinner";
+// import Spinner from './../../../Spinner/Spinner';
+
 import {
   MyTakWrapper,
   SimpleText,
