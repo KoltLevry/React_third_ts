@@ -1,57 +1,62 @@
-// import { ChangeEvent, useState, FormEvent } from "react";
-
 import Button from "components/Button/Button";
 import Input from "components/Input/Input";
 import { LoginFormContainer, Title, InputsContainer } from "./styles";
 import { useFormik } from "formik";
-
-// import 
+import * as Yup from 'yup'
+import { LoginFormValues } from "./types";
 
 function LoginForm() {
-  // const [email, setEmail] = useState<string>("");
-  // const [password, setPassword] = useState<string>("");
-  
-  // const onEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
-  //   setEmail(event.target.value);
-  // };
+  // 2️⃣ Створюємо схему валідації (schema)
+  const schema = Yup.object().shape({
+    email: Yup.string()
+      .required('Field email is required')
+      .email('Field has type email')
+      .max(20, 'Max 20 symbols')
+      .min(10, 'Min 10 symbols')
+      .typeError('Email must be string'),
+    password: Yup.number()
+      .required('Field password is required')
+      .typeError('Password must be number')
+      .test('Check min password length', 'Min 10 symbols', (value) => String(value).length >= 10)
+      .test('Check max password length', 'Max 20 symbols', (value) => String(value).length <= 20)
+  })
 
-  // const onPasswordChange = (event: ChangeEvent<HTMLInputElement>) => {
-  //   setPassword(event.target.value);
-  // };
-
-  // const onLogin = (event: FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  //   console.log(email);
-  //   console.log(password);
-  // };
-
+  // 3️⃣ Використовуємо Formik для обробки форми
   const formik = useFormik({
-    initialValues: {
-      email: "",
+    initialValues: { // → початкові значення полів
+      email: '',
       password: '',
+    } as LoginFormValues,
+    validationSchema: schema,
+    validateOnChange: false,
+    onSubmit: (values: LoginFormValues) => {
+      console.table(values)
+    }
+  })
 
-    },
-    onSubmit: (values) => {console.log(values)}
-  });
-  
+  console.log(formik);
+
+  // 4️⃣ Описуємо вигляд форми (JSX) 
   return (
-    // <LoginFormContainer onSubmit={onLogin}>
-    <LoginFormContainer onSubmit={ () => {}}>
+     <LoginFormContainer onSubmit={formik.handleSubmit}> {/*  → запускає перевірку та викликає onSubmit  */}
+     {/*  */}
       <Title>Login form</Title>
       <InputsContainer>
-        {/* <input onChange={(event: ChangeEvent<HTMLInputElement>)=>{console.log(event);
-      }}/> */}
         <Input
           name="email"
-          label="Email"
-          // value={email}
-          // onChange={onEmailChange}
+          label="Email*" 
+          value={formik.values.email} 
+          onChange={formik.handleChange}
           placeholder="Enter your email"
+          // error={formik.errors.email}
         />
         <Input
           name="password"
-          label="Password"
+          label="Password*"
+          value={formik.values.password}
+          onChange={formik.handleChange}
           placeholder="Enter your password"
+          // error={formik.errors.password}
         />
       </InputsContainer>
       <Button type="submit" name="Login" />
