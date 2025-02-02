@@ -28,6 +28,9 @@ function Homeworks() {
           <ListItem>
             <StyledLink to="homework-11">Homework 11</StyledLink>
           </ListItem>
+          <ListItem>
+            <StyledLink to="homework-12">Homework 12</StyledLink>
+          </ListItem>
         </HwNumberContainerList>
       </HumworkNumberContainer>
 

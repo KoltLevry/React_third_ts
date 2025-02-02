@@ -22,6 +22,7 @@ export const HomeNumberContainer = styled.div`
 export const HomeNumberContainerList = styled.ul`
   list-style: none;
   padding: 0;
+  overflow-y: scroll;
 `;
 
 export const ListItem = styled.li`
