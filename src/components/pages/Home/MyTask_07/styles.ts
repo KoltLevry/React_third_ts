@@ -84,4 +84,41 @@ top: 0;
 left: 0;
 margin: 1em 0;
 `
-export const DefinitionDescription= styled.dd``
+export const DefinitionDescription = styled.dd``
+
+// third new section
+export const FlexBoxSection = styled.div`
+`
+
+export const FlexBoxWrapper = styled.div`
+height: 500px;
+border: 2px solid black;
+padding: 30px;
+
+overflow-y: scroll;
+
+display: flex;
+gap: 50px;
+flex-wrap: wrap;
+flex: 200px;
+`
+export const BoxBlock = styled.div`
+height: 400px;
+width: 400px;
+border: 2px solid black;
+background-color: lightgreen;
+`
+
+// articleSection
+export const ArticleSection = styled.div`
+display: flex;
+`
+export const Article = styled.article`
+flex: 1 200px;
+/* flex: 1; */
+
+&:nth-of-type(3) {
+    flex: 2 200px;
+    /* flex: 3; */
+}
+`
