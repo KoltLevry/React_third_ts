@@ -35,7 +35,7 @@ function Home() {
             <StyledLink to="mytask-06">Task 6 - Forms</StyledLink>
           </ListItem>
           <ListItem>
-            <StyledLink to="mytask-07">Task 7 - IDs search</StyledLink>
+            <StyledLink to="mytask-07">Task 7 - Css</StyledLink>
           </ListItem>
           <ListItem>
             <StyledLink to="mytask-08">Task 8 - 2-APIs</StyledLink>
