@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { FaStar } from 'react-icons/fa';
 
 export const MyTaskWrapper = styled.div`
 display: flex;
@@ -112,6 +113,16 @@ background-color: lightgreen;
 // articleSection
 export const ArticleSection = styled.div`
 display: flex;
+
+
+/* @media screen and (min-width: 768px){
+    flex-direction: column;
+} */
+
+/* Або можна взагалі прибрати screen, бо він за замовчуванням використовується для медіа-запитів: */
+    @media (min-width: 768px){
+    flex-direction: column;
+}
 `
 export const Article = styled.article`
 flex: 1 200px;
@@ -121,4 +132,56 @@ flex: 1 200px;
     flex: 2 200px;
     /* flex: 3; */
 }
+`
+// grid box
+
+export const GridBoxWrapper = styled.div`
+height: 300px;
+border: 2px solid black;
+padding: 30px;
+
+overflow-y: scroll;
+
+display: grid;
+grid-template-columns: 2fr 1fr 1fr;
+gap: 20px;
+`
+
+export const BoxBlockGrid = styled.div`
+background-color: lightgoldenrodyellow;
+border: 1px solid black;
+text-align: center;
+padding: 20px;
+`
+
+export const GridBoxWrapperPepeat = styled.div`
+height: 300px;
+border: 2px solid black;
+padding: 30px;
+
+overflow-y: scroll;
+
+display: grid;
+/* grid-template-columns: repeat(3, 1fr); */
+grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+grid-auto-rows: minmax(200px, auto);
+gap: 20px;
+`
+
+// viewport 
+export const ViewportBox = styled.div``
+
+export const ElementViewport = styled.p`
+/* font-size: calc(1rem + 2vw); */
+/* font-size: calc(1em + 1vw); */
+
+/* font-size: 10vh;  - розмір тексту не змінюжться при zoom сторінки*/
+
+/* font-size: min(3vw, 20px);  */
+/* Не більше 20px */
+
+font-size: clamp(14px, 2vw, 24px);
+/* шрифт не буде меншим за 14px, буде змінюватись за 2vw, але не перевищить 24px. */
+/*  clamp(мінімальне, бажане, максимальне). -  Заміняє медіа-запити для розмірів шрифтів, padding, margin тощо.*/
+
 `
