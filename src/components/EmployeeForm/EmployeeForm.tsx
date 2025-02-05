@@ -9,35 +9,41 @@ function EmployeeForm() {
   const schema = Yup.object().shape({
     fullName: Yup.string()
       .required("Field full name is required")
-      .min(5, "Min 5 symbols")
+      .min(2, "Min 2 symbols")
       .max(50, "Max 50 symbols"),
-    
+
+    surname: Yup.string()
+      .required("Field surname is required")
+      .max(50, "Max 15 symbols"),
+
     age: Yup.number()
       .required("Field age is required")
       .typeError("Age must be a number")
       .min(18, "Min age - 18")
       .max(80, "Max age - 80"),
 
-    jobTitle: Yup.string()
-      .max(30, "Max 30 symbols")
-      .optional(),
+    jobPosition: Yup.string().max(30, "Max 30 symbols").optional(),
 
-    termsAndConditions: Yup.boolean()
-      .oneOf([true], "You must accept the terms and conditions")
+    // termsAndConditions: Yup.boolean().oneOf(
+    //   [true],
+    //   "You must accept the terms and conditions"
+    // ),
   });
 
   const formik = useFormik({
     initialValues: {
-        fullName: "",
-        age: 18,
-        jobTitle: "",
-        termsAndConditions: false,
+      fullName: "",
+      surname: "",
+      age: 18,
+      jobPosition: "",
+      // jobTitle: "",
+      // termsAndConditions: false,
     } as unknown as EmployeeFormValues,
     validationSchema: schema,
     validateOnChange: false,
     onSubmit: (values: EmployeeFormValues) => {
       console.table(values);
-    }
+    },
   });
 
   return (
@@ -51,6 +57,14 @@ function EmployeeForm() {
           onChange={formik.handleChange}
           placeholder="Enter your full name"
           error={formik.errors.fullName}
+        />
+        <Input
+          name="surname"
+          label="Surname"
+          value={formik.values.surname}
+          onChange={formik.handleChange}
+          placeholder="Enter your surname"
+          error={formik.errors.surname}
         />
         <Input
           name="age"
