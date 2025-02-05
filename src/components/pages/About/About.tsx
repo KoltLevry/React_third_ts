@@ -1,7 +1,7 @@
 import { AboutPage } from "./styles"
 
 function About() {
-  return <AboutPage>Content about page</AboutPage>
+  return <AboutPage>Content About page</AboutPage>
   
 }
 export default About

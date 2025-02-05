@@ -1,5 +1,5 @@
 import GlobalStyles from './styles/GlobalStyles';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/pages/Home/Home";
 import MyTask_01 from "./components/pages/Home/MyTask_01/MyTask_01";
@@ -22,15 +22,37 @@ import Homework_09 from './components/pages/homeworks/Homework_09/Homework_09';
 import Homework_10 from './components/pages/homeworks/Homework_10/Homework_10';
 import Homework_11 from './components/pages/homeworks/Homework_11/Homework_11';
 import Homework_12 from './components/pages/homeworks/Homework_12/Homework_12';
+import Layout from 'components/Layout/Layout';
+import HomeMain from 'components/pages/HomeMain/HomeMain';
+import About from 'components/pages/About/About';
+import Users from 'components/pages/Users/Users';
+import User from 'components/pages/Users/components/User';
+import Clients from 'components/pages/Clients/Clients';
+import Facebook from 'components/pages/Clients/components/facebook/Facebook';
+import Google from 'components/pages/Clients/components/google/Google';
+import Microsoft from 'components/pages/Clients/components/microsoft/Microsoft';
 
 function App() {
   return (
-    <>
-    
-      <Router>
+    <BrowserRouter>    
           <GlobalStyles />
+          <Layout>
+            <Routes>
+              <Route path='/' element={<HomeMain />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/users' element={<Users />} />
+                <Route path='/users/user' element={<User />} />
+              <Route path='/clients' element={<Clients />} />
+                <Route path='/clients/facebook' element={<Facebook />} />
+                <Route path='/clients/google' element={<Google />} />
+                <Route path='/clients/microsoft' element={<Microsoft />} />
+            </Routes>
+          </Layout>
           <Navbar />
+           {/* Routes - собирает все маршруты приложения */}
           <Routes>
+            {/* Route - компонент, в который передаётся маршрут и контент, 
+         который нужно отрисовать по этому маршруту в Layout */}
             <Route path="/" element={<Home />} >
               <Route path="mytask-01" element={<MyTask_01 />} />
               <Route path="mytask-02" element={<MyTask_02 />} />
@@ -54,8 +76,7 @@ function App() {
               <Route path="homework-12" element={<Homework_12 />} />
             </Route>
           </Routes>
-      </Router>
-    </>
+    </BrowserRouter>
   );
 }
 

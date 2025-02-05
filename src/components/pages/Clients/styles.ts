@@ -7,6 +7,7 @@ export const ClientsPage = styled.div`
   gap: 30px;
   padding: 20px;
   font-size: 30px;
+  min-height: 100vh;
   `
 export const Title = styled.div`
  font-size: 36px;

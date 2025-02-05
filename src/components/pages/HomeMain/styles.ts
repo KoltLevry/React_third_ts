@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const AboutPage = styled.div`
+export const HomePage = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
