@@ -40,12 +40,14 @@ function App() {
             <Routes>
               <Route path='/' element={<HomeMain />} />
               <Route path='/about' element={<About />} />
-              <Route path='/users' element={<Users />} />
+              <Route path='/users' element={<Users />}>
                 <Route path='/users/user' element={<User />} />
-              <Route path='/clients' element={<Clients />} />
+              </Route>
+              <Route path='/clients' element={<Clients />}>
                 <Route path='/clients/facebook' element={<Facebook />} />
                 <Route path='/clients/google' element={<Google />} />
                 <Route path='/clients/microsoft' element={<Microsoft />} />
+              </Route>
             </Routes>
           </Layout>
           <Navbar />

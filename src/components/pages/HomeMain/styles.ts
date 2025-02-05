@@ -6,5 +6,4 @@ export const HomePage = styled.div`
   flex: 1;
   padding: 20px;
   font-size: 30px;
-  min-height: 100vh;
   `
