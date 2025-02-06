@@ -55,6 +55,11 @@ import { Link } from 'react-router-dom';
               }>
               Lesson 14
             </StyledNavLink>
+            <StyledNavLink to='/homework14' style={
+                ({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })
+              }>
+              Homework 14
+            </StyledNavLink>
           </NavContainer>
         </Header>
         <Main>{children}</Main>
