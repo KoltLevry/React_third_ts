@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import {
     LayoutComponent,
     Header,
@@ -8,12 +9,18 @@ import {
     StyledNavLink
   } from './styles'
   import { LayoutProps } from './types'
+import { Link } from 'react-router-dom';
   
   function Layout({ children }: LayoutProps) {
+
+    // обовяз викликаємо - тільки при виклику може щось повернутися
+    const navigate = useNavigate();
+
     return (
       <LayoutComponent>
         <Header>
-          <LogoContainer></LogoContainer>
+          {/* картинки, діви, кнопки - всі мають артибут onClick */}
+          <LogoContainer onClick={()=>{navigate('/')}}></LogoContainer>
           <NavContainer>
             <StyledNavLink
               to='/'
@@ -43,11 +50,16 @@ import {
               }>
               Clients
             </StyledNavLink>
+            <StyledNavLink to='/lesson14' style={
+                ({ isActive }) => ({ textDecoration: isActive ? 'underline' : 'none' })
+              }>
+              Lesson 14
+            </StyledNavLink>
           </NavContainer>
         </Header>
         <Main>{children}</Main>
         <Footer>
-          <LogoContainer></LogoContainer>
+          <Link to='/'><LogoContainer></LogoContainer></Link>
         </Footer>
       </LayoutComponent>
     )

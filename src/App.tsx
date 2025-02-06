@@ -31,6 +31,7 @@ import Clients from 'components/pages/Clients/Clients';
 import Facebook from 'components/pages/Clients/components/facebook/Facebook';
 import Google from 'components/pages/Clients/components/google/Google';
 import Microsoft from 'components/pages/Clients/components/microsoft/Microsoft';
+import Lesson14 from 'components/pages/lessons/Lesson14/Lesson14';
 
 function App() {
   return (
@@ -43,11 +44,12 @@ function App() {
               <Route path='/users' element={<Users />}>
                 <Route path='/users/user' element={<User />} />
               </Route>
-              <Route path='/clients' element={<Clients />}>
+              <Route path='/clients' element={<Clients />}/>
                 <Route path='/clients/facebook' element={<Facebook />} />
                 <Route path='/clients/google' element={<Google />} />
                 <Route path='/clients/microsoft' element={<Microsoft />} />
-              </Route>
+                <Route path='/lesson14' element={<Lesson14 />} />
+              <Route path="*" element="Page not found" />
             </Routes>
           </Layout>
           <Navbar />
